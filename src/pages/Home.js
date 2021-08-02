@@ -19,7 +19,7 @@ export default function Home(props) {
     <HomeBg>
       <Header {...props} />
       <HomeContainer>
-        {data === null ? (
+        {!data ? (
           <EmptyMessage>
             It seems you have no CVs. Create you first one!
           </EmptyMessage>

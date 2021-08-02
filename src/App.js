@@ -6,7 +6,8 @@ import Creating from './pages/Creating'
 import Preview from './pages/Preview'
 
 function App() {
-  const [data, setData] = useState(null)
+  const [data, setData] = useState(undefined)
+  const [currentCv, setCurrentCv] = useState(undefined)
   const [inHome, setInHome] = useState(true)
   const [inCreating, setInCreating] = useState(false)
   const [inPreview, setInPreview] = useState(false)
@@ -20,7 +21,7 @@ function App() {
 
   return (
     <>
-      <DataContext.Provider value={{ data, setData }}>
+      <DataContext.Provider value={{ data, setData, currentCv, setCurrentCv }}>
         {inHome && (
           <Home
             setInHome={setInHome}
