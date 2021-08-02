@@ -1,17 +1,47 @@
 import React, { useState, useEffect } from 'react'
 import DataContext from './context/DataContext'
 
+import Home from './pages/Home'
+import Creating from './pages/Creating'
+import Preview from './pages/Preview'
+
 function App() {
   const [data, setData] = useState(null)
-  // useEffect(() => {
-  // gets stuff from local storage and checks if there's data
-  // if no data do nothing
-  // if data setData(data)
-  //})
+  const [inHome, setInHome] = useState(true)
+  const [inCreating, setInCreating] = useState(false)
+  const [inPreview, setInPreview] = useState(false)
+
+  useEffect(() => {
+    const localData = localStorage.getItem('data')
+    if (localData) {
+      setData(localData)
+    }
+  }, [])
+
   return (
     <>
       <DataContext.Provider value={{ data, setData }}>
-        <div>Hello World</div>
+        {inHome && (
+          <Home
+            setInHome={setInHome}
+            setInCreating={setInCreating}
+            setInPreview={setInPreview}
+          />
+        )}
+        {inCreating && (
+          <Creating
+            setInHome={setInHome}
+            setInCreating={setInCreating}
+            setInPreview={setInPreview}
+          />
+        )}
+        {inPreview && (
+          <Preview
+            setInHome={setInHome}
+            setInCreating={setInCreating}
+            setInPreview={setInPreview}
+          />
+        )}
       </DataContext.Provider>
     </>
   )
