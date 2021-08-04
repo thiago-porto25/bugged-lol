@@ -27,6 +27,9 @@ function App() {
             setInHome={setInHome}
             setInCreating={setInCreating}
             setInPreview={setInPreview}
+            inHome={inHome}
+            inCreating={inCreating}
+            inPreview={inPreview}
           />
         )}
         {inCreating && (
@@ -34,6 +37,9 @@ function App() {
             setInHome={setInHome}
             setInCreating={setInCreating}
             setInPreview={setInPreview}
+            inHome={inHome}
+            inCreating={inCreating}
+            inPreview={inPreview}
           />
         )}
         {inPreview && (
@@ -41,6 +47,11 @@ function App() {
             setInHome={setInHome}
             setInCreating={setInCreating}
             setInPreview={setInPreview}
+            currentCv={currentCv}
+            setCurrentCv={setCurrentCv}
+            inHome={inHome}
+            inCreating={inCreating}
+            inPreview={inPreview}
           />
         )}
       </DataContext.Provider>

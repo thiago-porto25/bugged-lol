@@ -13,7 +13,7 @@ const HomeContainer = styled.div``
 const NewCVButton = styled.button``
 
 export default function Home(props) {
-  const { data } = useContext(DataContext)
+  const { data, setCurrentCv } = useContext(DataContext)
 
   return (
     <HomeBg>
@@ -32,6 +32,7 @@ export default function Home(props) {
               onClick={() => {
                 props.setInHome(false)
                 props.setInPreview(true)
+                setCurrentCv(item)
               }}
             />
           ))
