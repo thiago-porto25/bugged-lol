@@ -70,7 +70,10 @@ export default function Education(props) {
             X
           </RemoveButton>
         </Frame>
-        <AddButton type="button" onClick={() => setCount((prev) => prev + 1)}>
+        <AddButton
+          type="button"
+          onClick={() => setCount((prev) => (prev < 3 ? prev + 1 : prev))}
+        >
           +
         </AddButton>
         <NextButton type="submit">Next</NextButton>

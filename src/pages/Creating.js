@@ -14,8 +14,8 @@ import {
 export default function Creating(props) {
   const { setCurrentCv, setData, currentCv } = useContext(DataContext)
   const [inGeneralInfo, setInGeneralInfo] = useState(false)
-  const [inEducation, setInEducation] = useState(true)
-  const [inExperience, setInExperience] = useState(false)
+  const [inEducation, setInEducation] = useState(false)
+  const [inExperience, setInExperience] = useState(true)
   const [inSkills, setInSkills] = useState(false)
   const [progress, setProgress] = useState(0)
 
