@@ -8,8 +8,8 @@ import Preview from './pages/Preview'
 function App() {
   const [data, setData] = useState(undefined)
   const [currentCv, setCurrentCv] = useState(undefined)
-  const [inHome, setInHome] = useState(true)
-  const [inCreating, setInCreating] = useState(false)
+  const [inHome, setInHome] = useState(false)
+  const [inCreating, setInCreating] = useState(true)
   const [inPreview, setInPreview] = useState(false)
 
   useEffect(() => {

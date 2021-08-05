@@ -8,9 +8,7 @@ export const Container = styled.div``
 
 export const Form = styled.form``
 
-export const Input = styled.input``
-
-export const Label = styled.label``
+export const Frame = styled.div``
 
 export const NextButton = styled.button``
 

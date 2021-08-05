@@ -12,9 +12,9 @@ import {
 } from '../components'
 
 export default function Creating(props) {
-  const { setCurrentCv, setData } = useContext(DataContext)
-  const [inGeneralInfo, setInGeneralInfo] = useState(true)
-  const [inEducation, setInEducation] = useState(false)
+  const { setCurrentCv, setData, currentCv } = useContext(DataContext)
+  const [inGeneralInfo, setInGeneralInfo] = useState(false)
+  const [inEducation, setInEducation] = useState(true)
   const [inExperience, setInExperience] = useState(false)
   const [inSkills, setInSkills] = useState(false)
   const [progress, setProgress] = useState(0)
@@ -41,6 +41,7 @@ export default function Creating(props) {
             setInEducation={setInEducation}
             setInExperience={setInExperience}
             setCurrentCv={setCurrentCv}
+            currentCv={currentCv}
             setProgress={setProgress}
           />
         )}
@@ -49,6 +50,7 @@ export default function Creating(props) {
             setInExperience={setInExperience}
             setInSkills={setInSkills}
             setCurrentCv={setCurrentCv}
+            currentCv={currentCv}
             setProgress={setProgress}
           />
         )}
@@ -57,6 +59,7 @@ export default function Creating(props) {
             setInSkills={setInSkills}
             setInExperience={setInExperience}
             setCurrentCv={setCurrentCv}
+            currentCv={currentCv}
             setData={setData}
             setInCreating={props.setInCreating}
             setInPreview={props.setInPreview}
