@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import styled from 'styled-components'
 import DataContext from '../context/DataContext'
 import {
@@ -15,13 +15,23 @@ export default function Creating(props) {
   const { setCurrentCv, setData, currentCv } = useContext(DataContext)
   const [inGeneralInfo, setInGeneralInfo] = useState(false)
   const [inEducation, setInEducation] = useState(false)
-  const [inExperience, setInExperience] = useState(true)
-  const [inSkills, setInSkills] = useState(false)
+  const [inExperience, setInExperience] = useState(false)
+  const [inSkills, setInSkills] = useState(true)
   const [progress, setProgress] = useState(0)
 
   const CreatingBg = styled.div``
 
   const CreatingContainer = styled.div``
+
+  useEffect(() => {
+    return () => {
+      setInGeneralInfo(true)
+      setInEducation(false)
+      setInExperience(false)
+      setInSkills(false)
+      setProgress(0)
+    }
+  }, [])
 
   return (
     <CreatingBg>
